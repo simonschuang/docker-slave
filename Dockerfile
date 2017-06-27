@@ -34,7 +34,7 @@ RUN curl --create-dirs -sSLo /usr/share/jenkins/slave.jar https://repo.jenkins-c
   && chmod 755 /usr/share/jenkins \
   && chmod 644 /usr/share/jenkins/slave.jar
 
-RUN apt-get install \
+RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
